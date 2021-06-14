@@ -6,6 +6,8 @@ import io.github.speciial.util.IndexedMinPriorityQueue;
 
 public class Prim {
 
+    private double totalWeight = 0.0;
+
     public Prim(Graph graph, int startNode) {
         double[] keys = new double[graph.V()];
         int[] parents = new int[graph.V()];
@@ -34,13 +36,16 @@ public class Prim {
             }
         }
 
-        double weight = 0;
+        totalWeight = 0.0;
         for (int i = 0; i < graph.V(); i++) {
             if(keys[i] != Double.POSITIVE_INFINITY) {
-                weight += keys[i];
+                totalWeight += keys[i];
             }
         }
-        System.out.println("Weight: " + weight);
     }
 
+    @Override
+    public String toString() {
+        return "Prim -> Total Weight: " + totalWeight;
+    }
 }

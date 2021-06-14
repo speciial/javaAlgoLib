@@ -4,7 +4,12 @@ import io.github.speciial.graph.Digraph;
 import io.github.speciial.graph.Edge;
 import io.github.speciial.util.IndexedMinPriorityQueue;
 
+import java.util.LinkedList;
+import java.util.List;
+
 public class Dijkstra {
+
+    private final List<String> allShortestPaths = new LinkedList<>();
 
     private final double[] distances;
     private final int[] predecessors;
@@ -27,10 +32,9 @@ public class Dijkstra {
             }
         }
 
-        System.out.println("All Shortest Paths: ");
         for (int i = 0; i < graph.V(); i++) {
             // TODO: display the shortest paths
-            System.out.println(start + " to " + i + ": " + distances[i]);
+            allShortestPaths.add(start + " -> " + i + ": " + distances[i]);
         }
     }
 
@@ -57,4 +61,15 @@ public class Dijkstra {
         }
     }
 
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+        builder.append("Dijkstra -> \n");
+
+        for (String path: allShortestPaths) {
+            builder.append(path).append("\n");
+        }
+
+        return builder.toString();
+    }
 }

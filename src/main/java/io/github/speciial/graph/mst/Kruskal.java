@@ -11,10 +11,12 @@ import java.util.Queue;
 
 public class Kruskal {
 
+    private double totalWeight;
+
     public Kruskal(Graph graph) {
         PriorityQueue<Edge> pq = new PriorityQueue<>(Arrays.asList(graph.getAllEdges()));
         Queue<Edge> edges = new LinkedList<>();
-        double weight = 0.0;
+        totalWeight = 0.0;
 
         UnionFind uf = new UnionFind(graph.V());
         while (!pq.isEmpty() && edges.size() < (graph.V() - 1)) {
@@ -24,14 +26,17 @@ public class Kruskal {
             if (uf.find(v) != uf.find(w)) {
                 uf.union(v, w);
                 edges.add(e);
-                weight += e.getWeight();
+                totalWeight += e.getWeight();
             }
-        }
-
-        System.out.println("Weight: " + weight);
-        for(Edge edge : edges) {
-            System.out.println(edge);
         }
     }
 
+    public double getTotalWeight() {
+        return totalWeight;
+    }
+
+    @Override
+    public String toString() {
+        return "Kruskal -> Total Weight: " + totalWeight;
+    }
 }

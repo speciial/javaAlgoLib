@@ -5,6 +5,8 @@ import io.github.speciial.graph.Edge;
 
 public class PreflowPush {
 
+    private double maxFlow;
+
     private int edgeIndex = 0;
 
     private Edge[] edges;
@@ -36,7 +38,7 @@ public class PreflowPush {
             }
         }
 
-        System.out.println("MAX FLOW: " + excess[sink]);
+        maxFlow = excess[sink];
     }
 
     private void preflow(int source) {
@@ -146,4 +148,8 @@ public class PreflowPush {
         }
     }
 
+    @Override
+    public String toString() {
+        return "PreflowPush -> MaxFlow: " + maxFlow;
+    }
 }

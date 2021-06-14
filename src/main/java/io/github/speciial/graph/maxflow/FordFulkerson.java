@@ -12,6 +12,8 @@ import static io.github.speciial.graph.NodeColor.WHITE;
 
 public class FordFulkerson {
 
+    private double maxFlow;
+
     private final int V;
     private int[] predecessors;
 
@@ -40,7 +42,7 @@ public class FordFulkerson {
             flow += pathCapacity;
         }
 
-        System.out.println("Max Flow: " + flow);
+        maxFlow = flow;
     }
 
     private boolean findAugmentingPath(double[][] resNet, int start, int end) {
@@ -80,5 +82,9 @@ public class FordFulkerson {
         return found;
     }
 
+    @Override
+    public String toString() {
+        return "FordFulkerson -> Max Flow: " + maxFlow;
+    }
 }
 
