@@ -26,3 +26,7 @@ mainClassName = "io.github.speciial.MainApp"
 test {
     useJUnitPlatform()
 }
+
+run {
+    standardInput = System.in
+}
