@@ -1,4 +1,4 @@
-package io.github.speciial.elementarydatastructures;
+package io.github.speciial.datastructures.elementarydatastructures;
 
 import io.github.speciial.exceptions.OverflowException;
 import io.github.speciial.exceptions.UnderflowException;

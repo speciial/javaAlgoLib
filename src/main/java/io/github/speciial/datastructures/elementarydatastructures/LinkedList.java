@@ -1,4 +1,4 @@
-package io.github.speciial.elementarydatastructures;
+package io.github.speciial.datastructures.elementarydatastructures;
 
 public class LinkedList {
 

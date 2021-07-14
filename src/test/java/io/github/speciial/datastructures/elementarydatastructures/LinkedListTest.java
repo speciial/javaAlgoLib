@@ -1,6 +1,6 @@
-package io.github.speciial.elementarydatastructures;
+package io.github.speciial.datastructures.elementarydatastructures;
 
-import io.github.speciial.elementarydatastructures.LinkedList.Element;
+import io.github.speciial.datastructures.elementarydatastructures.LinkedList.Element;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

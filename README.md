@@ -7,6 +7,9 @@ Students tend to utilize the data structures provided by the language (such as A
 performance drop that comes with them when compared to simple arrays. For this reason, the library contains an 
 implementation for both variants (simple array and ArrayList) and a performance comparison as option in the CLI. 
 
+CLRS uses arrays starting with the index 1 up to n inclusive, so the implementations have to be adjusted slightly to 
+use zero-based arrays. 
+
 - [x]  Insertion Sort (Standard / ArrayList)
 - [x]  Selection Sort (Standard / ArrayList)
 - [x]  Heap Sort (Standard / ArrayList)
@@ -26,19 +29,18 @@ of the material in CLRS.
 
 ### Elementary Data Structures
 
-- [ ] Stack
-- [ ] Queue
-- [ ] Linked List
-- [ ] ...
+Stack and Queue use arrays internally to store the elements, meaning we have to adjust the indices such that they apply 
+for zero-based arrays.  
+
+- [x] Stack
+- [x] Queue
+- [x] Linked List
+- [ ] Pointers and Objects (?)
+- [ ] Rooted Trees (?)
 
 ### Hash Tables
 
-### Trees
+### Binary Search Tree
 
-- [ ] Binary Search Trees
-- [ ] Red-Black Trees
-- [ ] B-Trees
-- [ ] AVL Trees
-- [ ] Heap ? 
-- [ ] Fibonacci Heap
-- [ ] van Emde Boas Trees  
+### Red-Black Trees
+
