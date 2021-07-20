@@ -42,5 +42,22 @@ for zero-based arrays.
 
 ### Binary Search Tree
 
+- [x] insert
+- [x] search 
+- [x] delete
+- [x] minimum
+- [x] maximum
+- [x] successor
+- [x] predecessor
+- [ ] TESTS
+
 ### Red-Black Trees
 
+- [x] insert
+- [x] search
+- [ ] delete
+- [x] minimum
+- [x] maximum
+- [x] successor
+- [x] predecessor
+- [ ] TESTS

@@ -51,4 +51,54 @@ class RedBlackTreeTest {
         assertEquals(v.key, foundV.key);
     }
 
+    @Test
+    void testSingleDelete() {
+        RedBlackTree tree = new RedBlackTree();
+        Node x = new Node(21.0);
+        Node y = new Node(22.0);
+        Node z = new Node(99.0);
+        Node w = new Node(24.0);
+        Node v = new Node(25.0);
+
+        tree.insert(x);
+        tree.insert(y);
+        tree.insert(z);
+        tree.insert(w);
+        tree.insert(v);
+
+        tree.delete(y);
+        assertNull(tree.search(22.0));
+    }
+
+    @Test
+    void testMultipleDelete() {
+        RedBlackTree tree = new RedBlackTree();
+        Node x = new Node(21.0);
+        Node y = new Node(22.0);
+        Node z = new Node(99.0);
+        Node w = new Node(24.0);
+        Node v = new Node(25.0);
+
+        tree.insert(x);
+        tree.insert(y);
+        tree.insert(z);
+        tree.insert(w);
+        tree.insert(v);
+
+        tree.delete(y);
+        assertNull(tree.search(y.key));
+
+        tree.delete(x);
+        assertNull(tree.search(x.key));
+
+        tree.delete(v);
+        assertNull(tree.search(v.key));
+
+        tree.delete(z);
+        assertNull(tree.search(z.key));
+
+        tree.delete(w);
+        assertNull(tree.search(w.key));
+    }
+
 }
