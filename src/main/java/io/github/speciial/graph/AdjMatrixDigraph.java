@@ -55,6 +55,7 @@ public class AdjMatrixDigraph {
                 double edgeWeight = Double.parseDouble(lineElements[2]);    // Gewicht der Kante
 
                 this.addEdge(Integer.parseInt(nodeA), Integer.parseInt(nodeB), edgeWeight);
+                this.addEdge(Integer.parseInt(nodeB), Integer.parseInt(nodeA), edgeWeight);
             }
 
         } catch (NullPointerException e) {
